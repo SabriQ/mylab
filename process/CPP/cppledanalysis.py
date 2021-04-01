@@ -49,7 +49,7 @@ def add_both(video):
     print("=======%s========"%os.path.basename(video))
     # add led_value
     v = CPP_Video(video)
-    v.leds_pixel_value(half_diameter=8,according="median",binarize=True)
+    v.leds_pixel_value(half_diameter=8,according="led_xy",binarize=True)
     # add led off/offset
     f = CPPLedPixelValue(v.led_value_ts)
     f.lick_water(baseline=(30,5),threshold=None,led1_trace=None,led2_trace=None,save=True,show=False)
